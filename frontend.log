@@ -1,0 +1,14 @@
+::1 - - [26/Jun/2025 21:15:45] "GET / HTTP/1.1" 200 -
+::1 - - [26/Jun/2025 21:15:47] "GET / HTTP/1.1" 304 -
+::1 - - [26/Jun/2025 21:15:47] "GET /script.js HTTP/1.1" 304 -
+::1 - - [26/Jun/2025 21:15:47] "GET /styles.css HTTP/1.1" 200 -
+::1 - - [26/Jun/2025 21:15:52] code 404, message File not found
+::1 - - [26/Jun/2025 21:15:52] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+::1 - - [26/Jun/2025 21:15:52] "GET /styles.css HTTP/1.1" 304 -
+::1 - - [26/Jun/2025 21:15:57] "GET / HTTP/1.1" 200 -
+::1 - - [26/Jun/2025 21:15:57] code 404, message File not found
+::1 - - [26/Jun/2025 21:15:57] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+::1 - - [26/Jun/2025 21:15:57] "GET /styles.css HTTP/1.1" 200 -
+::1 - - [26/Jun/2025 21:15:57] "GET /script.js HTTP/1.1" 200 -
+::1 - - [26/Jun/2025 21:15:57] code 404, message File not found
+::1 - - [26/Jun/2025 21:15:57] "GET /favicon.ico HTTP/1.1" 404 -

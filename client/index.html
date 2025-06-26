@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Predictor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">
+                    <i class="fas fa-home"></i>
+                    House Price Predictor
+                </h1>
+                <p class="subtitle">Get accurate price predictions for properties in Bengaluru</p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="prediction-card">
+                <div class="card-header">
+                    <h2>Property Details</h2>
+                    <p>Fill in the details below to get your price prediction</p>
+                </div>
+
+                <form id="predictionForm" class="prediction-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Location
+                            </label>
+                            <select id="location" name="location" required>
+                                <option value="">Select Location</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bhk">
+                                <i class="fas fa-bed"></i>
+                                BHK (Bedrooms)
+                            </label>
+                            <select id="bhk" name="bhk" required>
+                                <option value="">Select BHK</option>
+                                <option value="1">1 BHK</option>
+                                <option value="2">2 BHK</option>
+                                <option value="3">3 BHK</option>
+                                <option value="4">4 BHK</option>
+                                <option value="5">5 BHK</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="area">
+                                <i class="fas fa-ruler-combined"></i>
+                                Total Area (sq ft)
+                            </label>
+                            <input type number id="area" name="area" value="1000" required/>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bathrooms">
+                                <i class="fas fa-bath"></i>
+                                Bathrooms
+                            </label>
+                            <select id="bathrooms" name="bathrooms" required>
+                                <option value="">Select Bathrooms</option>
+                                <option value="1">1 Bathroom</option>
+                                <option value="2">2 Bathrooms</option>
+                                <option value="3">3 Bathrooms</option>
+                                <option value="4">4 Bathrooms</option>
+                                <option value="5">5 Bathrooms</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="predict-btn" id="predictBtn">
+                        <i class="fas fa-calculator"></i>
+                        Predict Price
+                        <div class="btn-loader" id="btnLoader"></div>
+                    </button>
+                </form>
+
+                <div class="result-section" id="resultSection">
+                    <!-- Main Price Card -->
+                    <div class="price-card">
+                        <div class="price-card-header">
+                            <div class="price-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div class="price-title">
+                                <h3>Estimated Property Value</h3>
+                                <p class="price-subtitle">Based on current market analysis</p>
+                            </div>
+                        </div>
+                        <div class="price-main">
+                            <div class="price-amount">
+                                <span class="currency">₹</span>
+                                <span class="price-value" id="predictedPrice">--</span>
+                                <span class="price-unit">Lakhs</span>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Property Details Cards -->
+                    <div class="details-grid">
+                        <div class="detail-card location-card">
+                            <div class="detail-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h4>Location</h4>
+                                <p id="resultLocation">--</p>
+                            </div>
+                        </div>
+
+                        <div class="detail-card config-card">
+                            <div class="detail-icon">
+                                <i class="fas fa-bed"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h4>Configuration</h4>
+                                <p id="resultConfig">--</p>
+                            </div>
+                        </div>
+
+                        <div class="detail-card area-card">
+                            <div class="detail-icon">
+                                <i class="fas fa-ruler-combined"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h4>Total Area</h4>
+                                <p id="resultArea">--</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="result-actions">
+                        <button class="action-btn primary-btn" id="saveResult">
+                            <i class="fas fa-save"></i>
+                            Save Result
+                        </button>
+                        <button class="action-btn secondary-btn" id="shareResult">
+                            <i class="fas fa-share-alt"></i>
+                            Share
+                        </button>
+                        <button class="action-btn secondary-btn" id="newPrediction">
+                            <i class="fas fa-plus"></i>
+                            New Prediction
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 House Price Predictor. Built with ❤️ for accurate predictions.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
